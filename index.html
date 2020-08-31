@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Online Shopping</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="hamburger-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <a href="index.html" class="nav-logo">MYCompany</a>
+                <ul class="nav-list">
+                    <li class="nav-item home">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item products">
+                        <a href="#" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item gallery">
+                        <a href="#" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item contact">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item about">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="cart">
+                    <i class="ion-bag"><span class="cart-item-count">0</span></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="square left-square">
+            <img src="./img/square.png" alt="">
+        </div>
+        <div class="square right-square">
+            <img src="./img/square.png" alt="">
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <h1>bring home the <span>best</span></h1>
+                    <h4>online even midnight</h4>
+                    <p>Find designer brands for the whole family from this brands.</p>
+                    <a href="#" class="register">register now</a>
+                </div>
+                <div class="door-wrapper">
+                    <img src="./img/online-store.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay">
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+
+    <script>
+
+        const menu = document.body.querySelector('.hamburger-menu');
+        const navList = document.body.querySelector('.nav-list');
+
+
+        menu.addEventListener('click', () => {
+           
+            navList.classList.toggle('open');
+            menu.classList.toggle('toggle');
+        })
+
+        gsap.from('.left-square', 1, {
+            delay: .8,
+            x: -500,
+        });
+
+        gsap.from('.right-square', 1, {
+            delay: .8,
+            x: 300,
+            y: -300
+        });
+
+        gsap.from('.home', 1, {
+            delay: .3,
+            y: -100,
+        });
+
+        gsap.from('.products', 1, {
+            delay: .4,
+            y: -100,
+        });
+
+        gsap.from('.gallery', 1, {
+            delay: .5,
+            y: -100,
+        });
+
+        gsap.from('.contact', 1, {
+            delay: .6,
+            y: -100,
+        });
+
+        gsap.from('.about', 1, {
+            delay: .7,
+            y: -100,
+        });
+
+        gsap.from('.nav-logo', 1, {
+            delay: .3,
+            y: -100,
+            ease: 'elastic'
+        });
+
+        gsap.from('.door-wrapper', 2.5, {
+            delay: .5,
+            opacity: 0,
+        });
+
+    </script>
+</body>
+</html>
